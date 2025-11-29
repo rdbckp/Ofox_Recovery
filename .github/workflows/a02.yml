@@ -39,10 +39,10 @@ jobs:
             cd
             mkdir OrangeFox
             cd OrangeFox
-            repo init -u https://gitlab.com/OrangeFox/Manifest.git -b fox_12.1 --depth=1
-            repo sync -j8 --force-sync --optimized-fetch --no-clone-bundle
+            git clone https://gitlab.com/OrangeFox/sync.git # (or, using ssh, "git clone git@gitlab.com:OrangeFox/sync.git")
             cd
-            cd OrangeFox
+            cd OrangeFox/sync/
+            ./orangefox_sync.sh --branch 12.1 --path ~/fox_12.1
             git clone https://github.com/rdbckp/twrp_kernel_tree.git device/samsung/a02
             
       - name: Now Lets build Ofox
