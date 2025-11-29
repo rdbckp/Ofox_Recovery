@@ -39,7 +39,7 @@ jobs:
             cd
             mkdir OrangeFox
             cd OrangeFox
-            repo init -u https://gitlab.com/OrangeFox/sync.git -b fox_12.1 --depth=1
+            repo init -u https://gitlab.com/OrangeFox/Manifest.git -b fox_12.1 --depth=1
             repo sync -j8 --force-sync --optimized-fetch --no-clone-bundle
             cd
             cd OrangeFox
